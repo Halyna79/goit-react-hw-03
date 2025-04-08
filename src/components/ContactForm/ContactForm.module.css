@@ -1,24 +1,41 @@
 .formBlock {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    max-width: 320px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
     margin-bottom: 20px;
+    width: 300px;
 }
 
 .inputWrapper {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.inputWrapper label {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.inputWrapper input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
 }
 
 .errorText {
     color: crimson;
     font-size: 12px;
-    margin: 0;
 }
 
 .submitBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 8px 16px;
     font-size: 14px;
     background-color: #007bff;

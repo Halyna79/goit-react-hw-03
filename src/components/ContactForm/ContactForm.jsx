@@ -5,8 +5,8 @@ import { nanoid } from 'nanoid';
 import * as Yup from 'yup';
 
 const ValidationSchema = Yup.object().shape({
-    fullName: Yup.string().min(3, 'Too short').max(50, 'Too long').required('Required'),
-    phone: Yup.string().min(3, 'Too short').max(50, 'Too long').required('Required'),
+    name: Yup.string().min(3, 'Too short').max(50, 'Too long').required('Required'),
+    number: Yup.string().min(3, 'Too short').max(50, 'Too long').required('Required'),
 });
 
 function ContactForm({ onSubmitContact }) {
@@ -17,7 +17,7 @@ function ContactForm({ onSubmitContact }) {
         const newContact = {...values, id: nanoid(10)}
         onSubmitContact(newContact);
         actions.resetForm();
-    };
+    }
     return (
         <Formik
             initialValues={{ name: '', number: '' }}
